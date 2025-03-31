@@ -9,7 +9,7 @@ app.post("/api/prompt", async (req, res) => {
   const { prompt } = req.body;
   try {
     const response = await axios.post("https://api.openai.com/v1/chat/completions", {
-      model: "gpt-4-0125-preview",
+     model: "gpt-3.5-turbo",
       messages: [
         { role: "system", content: "You are an expert prompt engineer. Analyze and optimize this prompt." },
         { role: "user", content: prompt }
